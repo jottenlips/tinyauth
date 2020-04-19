@@ -1,4 +1,4 @@
-# tinyauth
+![](tinyauthlogo.png)
 
 tinyauth is a very tiny passwordless GraphQL authentication service. tinyauth keeps authentication simple with 3 easy steps.
 

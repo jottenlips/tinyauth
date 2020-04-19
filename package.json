@@ -1,0 +1,31 @@
+{
+  "name": "tinyauth-graphql-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sls wsgi serve -p 8000",
+    "test": "TABLE_NAME=tinyauth-test API_SECRET=somethingsecret python -m pytest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jottenlips/tinyauth-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jottenlips/tinyauth-api/issues"
+  },
+  "homepage": "https://github.com/jottenlips/tinyauth-api#readme",
+  "devDependencies": {
+    "serverless-dotenv-plugin": "^2.1.1",
+    "serverless-offline": "^5.12.0",
+    "serverless-python-requirements": "^5.0.1",
+    "serverless-wsgi": "^1.7.4"
+  },
+  "dependencies": {
+    "@serverless/components": "^2.29.1",
+    "@serverless/passwordless": "^0.2.0",
+    "serverless": "^1.67.3"
+  }
+}

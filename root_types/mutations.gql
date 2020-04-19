@@ -1,0 +1,9 @@
+interface TinyAuthResponse {
+  code: String!
+  success: Boolean!
+  message: String!
+}
+
+type Mutation {
+  hello: TinyAuthResponse
+}

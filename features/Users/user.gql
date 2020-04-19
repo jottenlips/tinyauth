@@ -1,0 +1,25 @@
+type TAUser {
+  id: String!
+  phone: String
+}
+
+input TAVerifyInput {
+  phone: String!
+  code: String
+}
+
+type TAUserResp implements TinyAuthResponse {
+  code: String!
+  success: Boolean!
+  message: String!
+  auth: String
+}
+
+extend type Query {
+  getMe: TAUser
+}
+
+extend type Mutation {
+  getVerification(phone: String): TAUserResp
+  verifyUser(verification: TAVerifyInput): TAUserResp
+}

@@ -1,6 +1,6 @@
-# tinyAuth
+# tinyauth
 
-tinyAuth is a very tiny passwordless GraphQL authentication service. tinyAuth keeps authentication simple with 3 easy steps.
+tinyauth is a very tiny passwordless GraphQL authentication service. tinyauth keeps authentication simple with 3 easy steps.
 
 ## Step 1
 

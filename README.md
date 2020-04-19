@@ -16,7 +16,7 @@ mutation {
 }
 ```
 
-# Step 2
+## Step 2
 
 - send code user received from phone to verify user
 
@@ -31,7 +31,7 @@ mutation {
 }
 ```
 
-# Step 3
+## Step 3
 
 - place jwt in headers {"auth": "auth-jwt-from-last-step"}
 
@@ -46,7 +46,7 @@ mutation {
 }
 ```
 
-## Develop
+### Develop
 
 Set up your .aws credentials, make a DynamoDB table named tinyauth-dev
 
@@ -77,11 +77,11 @@ API_SECRET=somethingsecret
 
 Run queries in Graphi at http://localhost:8000/graphql
 
-## Run Tests
+### Run Tests
 
 `TABLE_NAME=tinyauth-test API_SECRET=somethingsecret python -m pytest` or `yarn run test`
 
-## Deploy
+### Deploy
 
 Update your table name / secret in .env and run
 

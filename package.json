@@ -24,8 +24,6 @@
     "serverless-wsgi": "^1.7.4"
   },
   "dependencies": {
-    "@serverless/components": "^2.29.1",
-    "@serverless/passwordless": "^0.2.0",
     "serverless": "^1.67.3"
   }
 }

@@ -24,6 +24,8 @@
     "serverless-wsgi": "^1.7.4"
   },
   "dependencies": {
+    "global": "^4.4.0",
+    "saasify": "^1.18.30",
     "serverless": "^1.67.3"
   }
 }

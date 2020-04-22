@@ -7,6 +7,7 @@ plugins:
   - serverless-wsgi
   - serverless-dotenv-plugin
   - serverless-python-requirements
+  - serverless-domain-manager
 
 package:
   exclude:
@@ -44,6 +45,11 @@ provider:
     API_SECRET: ${env:API_SECRET}
 
 custom:
+  customDomain:
+    domainName: ${env:DOMAIN_NAME}
+    basePath: ""
+    stage: ${self:provider.stage}
+    createRoute53Record: true
   wsgi:
     app: app.app
     packRequirements: false
@@ -53,6 +59,7 @@ custom:
     include:
       - TABLE_NAME
       - API_SECRET
+      - DOMAIN_NAME
 
 functions:
   api:

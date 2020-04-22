@@ -1,0 +1,23 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "tinyauth",
+    "description": "A tiny passwordless authentication api"
+  },
+  "paths": {
+    "/graphql": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "{ \"data\": { \"getVerification\": { \"success\": true } } }"
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://3u8kdcggzb.execute-api.us-east-1.amazonaws.com/dev"
+    }
+  ]
+}

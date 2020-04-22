@@ -1,5 +1,12 @@
 {
   "name": "tinyauth",
-  "description": "✨ A tiny passwordless authentication service 📱",
-  "backendUrl": "https://3u8kdcggzb.execute-api.us-east-1.amazonaws.com/dev/graphql"
+  "description": "✨ A tiny passwordless authentication api 📱",
+  "backendUrl": "https://3u8kdcggzb.execute-api.us-east-1.amazonaws.com/dev",
+  "saas": {
+    "name": "",
+    "logo": "tinyauthlogo.png",
+    "theme": {
+      "color": "#ff00ff"
+    }
+  }
 }

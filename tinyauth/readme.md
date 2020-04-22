@@ -1,16 +1,14 @@
 # tinyauth
 
-> A tiny passwordless authentication service
+> A tiny passwordless auth service
 
-This template "saasifies" an example REST API [httbin.org](https://httpbin.org). It uses a standard [OpenAPI](https://swagger.io/specification/) spec to describe the API's endpoints.
+This template "saasifies" an example REST API [httbin.org](https://httpbin.org).
 
 Saasify acts as a proxy in front of this external API to handle auth, billing, rate limiting, etc. This allows your backend API to focus solely on your product's unique value proposition.
 
-Once you're ready, you'll want to replace this OpenAPI spec with one representing your externally hosted API.
+Once you're ready, you'll want to replace this `backendUrl` with a URL pointing to your SaaS product's externally hosted backend API.
 
-_Note that an OpenAPI spec is no longer required to use Saasify_. Including an OpenAPI spec allows Saasify to auto-generate API docs for your product. It also allows Saasify to perform additional validation as it proxies HTTP calls to your backend API.
-
-See our [quick start](https://docs.saasify.sh/#/quick-start) for a walkthrough of how to get started and our [OpenAPI guide](https://docs.saasify.sh/#/openapi) for more information on generating your own OpenAPI spec.
+See our [quick start](https://docs.saasify.sh/#/quick-start) for a walkthrough of how to get started.
 
 ## License
 

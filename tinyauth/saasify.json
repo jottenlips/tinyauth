@@ -1,5 +1,0 @@
-{
-  "name": "tinyauth",
-  "description": "Minimal starter template that saasifies an externally hosted backend API with support for additional OpenAPI validation.",
-  "openapi": "./openapi.json"
-}

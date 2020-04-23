@@ -1,7 +1,7 @@
 {
   "name": "tinyauth",
   "description": "✨ A tiny passwordless authentication api 📱",
-  "backendUrl": "https://3u8kdcggzb.execute-api.us-east-1.amazonaws.com/dev",
+  "backendUrl": "https://tinyauth.io",
   "saas": {
     "name": "",
     "logo": "tinyauthlogo.png",

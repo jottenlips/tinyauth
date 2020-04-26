@@ -8,7 +8,7 @@ tinyauth is a very tiny passwordless GraphQL authentication service. tinyauth ke
 
 ```graphql
 mutation {
-  getVerification(phone: "+15559993478") {
+  sendVerification(phone: "+15559993478") {
     code # 200
     message # verification sent
     success # true

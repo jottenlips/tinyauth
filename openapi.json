@@ -9,7 +9,7 @@
       "post": {
         "responses": {
           "200": {
-            "description": "{ \"data\": { \"getVerification\": { \"success\": true } } }"
+            "description": "{ \"data\": { \"sendVerification\": { \"success\": true } } }"
           }
         }
       }

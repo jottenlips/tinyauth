@@ -20,6 +20,6 @@ extend type Query {
 }
 
 extend type Mutation {
-  getVerification(phone: String): TAUserResp
+  sendVerification(phone: String): TAUserResp
   verifyUser(verification: TAVerifyInput): TAUserResp
 }

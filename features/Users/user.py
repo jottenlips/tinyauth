@@ -42,7 +42,7 @@ def delete_old_codes(phone):
     if (len(old_codes) > 0):
         return [delete_code(phone, code['sk'].split('#')[1]) for code in old_codes]
 
-def get_verification(obj, info, phone):
+def send_verification(obj, info, phone):
 
     try:
         number = phonenumbers.parse(phone, None)

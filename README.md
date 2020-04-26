@@ -88,3 +88,68 @@ Update your table name / secret in .env and run
 ```console
 sls deploy
 ```
+
+### No GraphQL Client?
+
+#### Send verification
+
+```python
+import requests
+
+variables = {'phone': '+155555555555'}
+mutation = """
+mutation SendVerification($phone: String!) {
+  sendVerification(phone: $phone) {
+    status
+    message
+    success
+  }
+}
+"""
+
+# or localhost:8000 for dev
+requests.post('https://tinyauth.io/graphql', json={'query': mutation, 'variables': variables})
+```
+
+#### Verify user
+
+```python
+import requests
+
+variables = {'phone': '+155555555555', 'code': '555555'}
+mutation = """
+mutation VerifyUser($phone: String!, $code: String!) {
+  verifyUser(verification: { phone: $phone, code: $code }) {
+    status
+    message
+    success
+    auth # auth jwt to include in future headers
+  }
+}
+"""
+
+# or localhost:8000 for dev
+requests.post('https://tinyauth.io/graphql', json={'query': mutation, 'variables': variables})
+```
+
+#### Get Me
+
+```python
+import requests
+
+headers = {
+  "auth": your-tinyauth-jwt
+}
+
+query = """
+{
+  getMe {
+    id
+    phone
+  }
+}
+"""
+
+# or localhost:8000 for dev
+requests.post('https://tinyauth.io/graphql', json={'query': query}, headers=headers)
+```

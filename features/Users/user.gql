@@ -9,7 +9,7 @@ input TAVerifyInput {
 }
 
 type TAUserResp implements TinyAuthResponse {
-  code: String!
+  status: String!
   success: Boolean!
   message: String!
   auth: String

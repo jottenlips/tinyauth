@@ -42,7 +42,7 @@ def delete_old_codes(phone):
     if (len(old_codes) > 0):
         return [delete_code(phone, code['sk'].split('#')[1]) for code in old_codes]
 
-def get_verification(obj, info, phone):
+def send_verification(obj, info, phone):
 
     try:
         number = phonenumbers.parse(phone, None)
@@ -50,13 +50,13 @@ def get_verification(obj, info, phone):
         if not phonenumbers.is_valid_number(number):
             return {
                 'message': f'Phone number is not E164',
-                'code': 400,
+                'status': 400,
                 'success': False
             }
     except Exception as e: 
         return {
             'message': f'Phone number is not E164',
-            'code': 400,
+            'status': 400,
             'success': False
         }
 
@@ -81,7 +81,7 @@ def get_verification(obj, info, phone):
     )
     return {
         'message': 'success',
-        'code': 200,
+        'status': 200,
         'success': True
     }
 
@@ -121,7 +121,7 @@ def verify_user(obj, info, verification):
             return {
                 'auth': auth.decode("utf-8") ,
                 'message': 'success, reauthenticated user',
-                'code': 200,
+                'status': 200,
                 'success': True
             }
 
@@ -140,11 +140,11 @@ def verify_user(obj, info, verification):
         return {
             'auth': auth.decode("utf-8") ,
             'message': 'success, user created',
-            'code': 200,
+            'status': 200,
             'success': True
         }
     return {
         'message': 'not found',
-        'code': 400,
+        'status': 400,
         'success': True
     }

@@ -1,0 +1,12 @@
+{
+  "name": "tinyauth",
+  "description": "✨ A tiny passwordless authentication api 📱",
+  "backendUrl": "https://tinyauth.io",
+  "saas": {
+    "name": "",
+    "logo": "tinyauthlogo.png",
+    "theme": {
+      "color": "#ff00ff"
+    }
+  }
+}

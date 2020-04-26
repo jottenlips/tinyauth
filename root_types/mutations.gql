@@ -1,5 +1,5 @@
 interface TinyAuthResponse {
-  code: String!
+  status: String!
   success: Boolean!
   message: String!
 }

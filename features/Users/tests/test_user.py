@@ -16,14 +16,14 @@ def test_send_verification():
     arn = resp["TopicArn"]
     client.subscribe(TopicArn=arn, Protocol="sms", Endpoint=phone)
     resp = send_verification(None, None, phone)
-    assert resp['code'] == 200
+    assert resp['status'] == 200
 
 @mock_dynamodb2
 def test_verify_user():
     setup_mocks()
     table().put_item(Item=mock_verification)
     resp = verify_user(None, None, {'phone': phone, 'code': '123456'})
-    assert resp['code'] == 200
+    assert resp['status'] == 200
     assert resp['auth'] != None
 
 class MockObject():

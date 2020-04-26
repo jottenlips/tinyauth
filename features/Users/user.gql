@@ -20,6 +20,7 @@ extend type Query {
 }
 
 extend type Mutation {
-  sendVerification(phone: String!): TAUserResp
+  # Phone number to send verification to and message to send to user ex. Your code is _
+  sendVerification(phone: String!, message: String): TAUserResp
   verifyUser(verification: TAVerifyInput): TAUserResp
 }

@@ -6,6 +6,7 @@ import boto3
 import os 
 from random import randint
 import time
+import phonenumbers
 
 def get_me(obj, info):
     request = info.context
@@ -44,6 +45,16 @@ def delete_old_codes(phone):
         return [delete_code(phone, code['sk'].split('#')[1]) for code in old_codes]
 
 def get_verification(obj, info, phone):
+
+    try:
+        phone = phonenumbers.format_number(phone, phonenumbers.PhoneNumberFormat.E164)
+    except:
+        return {
+            'message': 'Phone number cannot be formatted to E164',
+            'code': 400,
+            'success': False
+        }
+
     delete_old_codes(phone)
     id = str(uuid.uuid4())
     verification_code = ''.join(["{}".format(randint(0, 9)) for num in range(0, 6)])

@@ -39,18 +39,17 @@ def delete_old_codes(phone):
             ':sk': 'verificationCode#'
         }
     )['Items']
-    print('::::here')
     if (len(old_codes) > 0):
-        print(':::oh shit')
         return [delete_code(phone, code['sk'].split('#')[1]) for code in old_codes]
 
 def get_verification(obj, info, phone):
 
     try:
-        phone = phonenumbers.format_number(phone, phonenumbers.PhoneNumberFormat.E164)
-    except:
+        number = phonenumbers.parse(phone, None)
+        phonenumbers.format_number(number, phonenumbers.PhoneNumberFormat.E164)
+    except Exception as e: 
         return {
-            'message': 'Phone number cannot be formatted to E164',
+            'message': f'Phone number is not E164',
             'code': 400,
             'success': False
         }

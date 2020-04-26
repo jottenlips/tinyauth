@@ -42,7 +42,7 @@ def delete_old_codes(phone):
     if (len(old_codes) > 0):
         return [delete_code(phone, code['sk'].split('#')[1]) for code in old_codes]
 
-def send_verification(obj, info, phone):
+def send_verification(obj, info, phone, message='Hello! your verification code is'):
 
     try:
         number = phonenumbers.parse(phone, None)
@@ -77,7 +77,7 @@ def send_verification(obj, info, phone):
     )
     client.publish(
         PhoneNumber = phone,
-        Message = f'Hello! your verification code is {verification_code}'
+        Message = f'{message} {verification_code}'
     )
     return {
         'message': 'success',

@@ -46,7 +46,13 @@ def get_verification(obj, info, phone):
 
     try:
         number = phonenumbers.parse(phone, None)
-        phonenumbers.format_number(number, phonenumbers.PhoneNumberFormat.E164)
+        e164_number  = phonenumbers.format_number(number, phonenumbers.PhoneNumberFormat.E164)
+        if not phonenumbers.is_valid_number(number):
+            return {
+                'message': f'Phone number is not E164',
+                'code': 400,
+                'success': False
+            }
     except Exception as e: 
         return {
             'message': f'Phone number is not E164',

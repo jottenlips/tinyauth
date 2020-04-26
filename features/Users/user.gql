@@ -5,7 +5,7 @@ type TAUser {
 
 input TAVerifyInput {
   phone: String!
-  code: String
+  code: String!
 }
 
 type TAUserResp implements TinyAuthResponse {
@@ -20,6 +20,6 @@ extend type Query {
 }
 
 extend type Mutation {
-  sendVerification(phone: String): TAUserResp
+  sendVerification(phone: String!): TAUserResp
   verifyUser(verification: TAVerifyInput): TAUserResp
 }

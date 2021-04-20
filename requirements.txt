@@ -36,7 +36,7 @@ networkx==2.4
 packaging==20.3
 phonenumbers==8.12.2
 pluggy==0.13.1
-py==1.8.1
+py==1.10.0
 pyasn1==0.4.8
 pycparser==2.20
 PyJWT==1.7.1

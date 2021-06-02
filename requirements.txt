@@ -55,7 +55,7 @@ six==1.14.0
 sshpubkeys==3.1.0
 starlette==0.13.2
 typing-extensions==3.7.4.2
-urllib3==1.25.8
+urllib3==1.26.5
 wcwidth==0.1.9
 websocket-client==0.57.0
 Werkzeug==1.0.1

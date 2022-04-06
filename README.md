@@ -1,6 +1,8 @@
 ![](tinyauthlogo.png)
 
-tinyauth is a very tiny passwordless GraphQL authentication service. tinyauth keeps authentication simple with 3 easy steps.
+tinyauth is a very tiny passwordless GraphQL authentication service. tinyauth keeps authentication simple with 3 easy steps. 
+
+(This is a toy, don't use for production)
 
 ## Step 1
 

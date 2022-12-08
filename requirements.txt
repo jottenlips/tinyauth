@@ -5,7 +5,7 @@ aws-xray-sdk==2.5.0
 boto==2.49.0
 boto3==1.12.39
 botocore==1.15.39
-certifi==2020.4.5.1
+certifi==2022.12.7
 cffi==1.14.0
 cfn-lint==0.29.5
 chardet==3.0.4

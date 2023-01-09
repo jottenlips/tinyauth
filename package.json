@@ -20,7 +20,7 @@
   "devDependencies": {
     "serverless-domain-manager": "^3.3.2",
     "serverless-dotenv-plugin": "^2.1.1",
-    "serverless-offline": "^5.12.0",
+    "serverless-offline": "^12.0.4",
     "serverless-python-requirements": "^5.0.1",
     "serverless-wsgi": "^1.7.4"
   },

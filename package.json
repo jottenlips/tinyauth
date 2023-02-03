@@ -27,6 +27,6 @@
   "dependencies": {
     "global": "^4.4.0",
     "saasify": "^1.18.30",
-    "serverless": "^1.67.3"
+    "serverless": "^3.27.0"
   }
 }
